@@ -247,7 +247,7 @@ state_shape = env.observation_space.shape
 
 ppo=PPO(state_shape[0],gamma=0.99, K_epochs=16, eps_clip=0.2,n_bins=3,lr=0.001,deterministic=False)
 
-ppo.load(r'C:\Users\totos\OneDrive\Documents\Reinforcement\ActorCritic_state_dict2.pth')
+ppo.load(r'C:\Users\..')
 
 n_episodes=20
 obs=env.reset()
@@ -260,6 +260,6 @@ for episode in range(n_episodes):
         ppo.buffer.rewards.append(reward)
         ppo.buffer.terminals.append(term)
     ppo.train()
-ppo.save(r'C:\Users\totos\OneDrive\Documents\Reinforcement\ActorCritic_state_dict2.pth')
+ppo.save(r'C:\Users\..')
 ppo.print()
 env.close()
